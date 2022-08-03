@@ -4,8 +4,8 @@
     :to="{ name: 'EventLayoutView', params: { id: event.id } }"
   >
     <div class="event-card">
-      <span>@{{ event.time }} on {{ event.date }}</span>
-      <h4>{{ event.title }}</h4>
+      <h4>passenger name: {{ event.name }}</h4>
+      <h4>trips {{ event.trips }}</h4>
     </div>
   </router-link>
 </template>

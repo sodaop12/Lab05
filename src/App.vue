@@ -1,12 +1,12 @@
 <template>
+  <div id="flashMessage" v-if="Gstore.flashMessage">
+    {{ Gstore.flashMessage }}
+  </div>
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </nav>
   <router-view />
-  <div id="flashMessage" v-if="Gstore.flashMessage">
-    {{ Gstore.flashMessage }}
-  </div>
 </template>
 
 <script>
@@ -26,7 +26,7 @@ export default {
 }
 #flashMessage {
   animation-name: yellowfade;
-  animation-duration: 3s;
+  animation-duration: 5s;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

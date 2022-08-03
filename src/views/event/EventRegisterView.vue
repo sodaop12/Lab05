@@ -1,6 +1,8 @@
 <template>
-  <p>Registration form here</p>
-  <button @click="register">Register Me</button>
+  <h4>passenger name: {{ event.name }}</h4>
+  <h4>trips: {{ event.trips }}</h4>
+  <h4>id: {{ event.id }}</h4>
+  <button @click="register">update passengers detail</button>
 </template>
 
 <script>
@@ -10,13 +12,13 @@ export default {
   methods: {
     register() {
       this.Gstore.flashMessage =
-        'you are success fully registered for ' + this.event.title
+        'you are success fully update the passengers information ' +
+        this.event.name
       setTimeout(() => {
         this.Gstore.flashMessage = ''
-      }, 3000)
+      }, 5000)
       this.$router.push({
-        name: 'EventDetails',
-        params: { id: this.event.id }
+        name: 'EventList'
       })
     }
   }
