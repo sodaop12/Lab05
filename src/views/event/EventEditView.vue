@@ -1,6 +1,6 @@
 <template>
   <p>Edit the event here</p>
-  <button @click="register">Register Me</button>
+  <button @click="Edit">Edit Me</button>
 </template>
 
 <script>
@@ -8,7 +8,7 @@ export default {
   props: ['id', 'event'],
   inject: ['Gstore'],
   methods: {
-    register() {
+    Edit() {
       this.Gstore.flashMessage =
         'you are success fully updated the' + this.event.title
       setTimeout(() => {
